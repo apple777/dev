@@ -39,6 +39,7 @@ EventDispacher = function() {
         this.listeners = [];
 
         this.listeners.push("on");
+        this.listeners.push("on2");
         console.log(this.listeners);
 
         function nadav(){
