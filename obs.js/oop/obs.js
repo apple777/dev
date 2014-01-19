@@ -34,7 +34,7 @@ EventDispacher = function() {
      *  @param {Object} optional context for callback (i,e the 'this' of the callback)
      *
      **/
-    on : function(testEvent, atest) {
+    on : function(testEvent, obj1) {
         //this.nadav.push({a:a});
         this.listeners = [];
 
