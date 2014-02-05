@@ -8,8 +8,9 @@ var check = [];  // init global var declertion
 var obj1 = {'a': 1};
 var obj2 = {'a': 2};
 
-//		 .on receve anonimus function -> MAKE THIS FUNC CALL 
-e.on("testEvent", function() { // 
+//		 .on receve anonimus function -> MAKE THIS FUNC CALL
+
+e.on("testEvent", function() { //  
 	check.push(["a", this.a]); // obj1 argument let this.a to know - obj1 param// 
 }, obj1);
 
@@ -21,6 +22,7 @@ e.on("testEvent", function() {
 var msg = check.length == 0 ? "good" : "bad";  //			good 
 console.log("test0 : " + msg);
 
+// make thing happen
 e.trigger('testEvent'); // we need to call to .on -> func - in order that check is full 
 
 //MAKE on : {}, add value 

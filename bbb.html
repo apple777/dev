@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JS FOOD</title>
+
+
+    <!--link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/json2-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/underscore-1.3.3-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/backbone-0.9.2-min.js"></script-->
+
+    	<script>
+
+/*********************************
+ * CTRL+F "TODO" FOR TASKS !!!
+ *
+ *
+ *********************************/
+
+
+// note: javascript attempts to be environment-agnostic and does not target a web browser environment.
+// objects have additional features, such as a prototype chain, which ordinary associative arrays do not have.
+// powerful of js is the option to add key:value at runtime within obj
+
+// a short, one-line comment
+
+/* this bla, multi-line comment
+be great. */
+
+/*********************************
+ * TODO 
+ *
+ * @fibonacci number javascript
+ * @setter and getter 
+ *
+ *********************************/
+
+//DOM
+//console.log(window.document.URL);
+//console.log(window.document);
+
+//class.js - Simple JavaScript Inheritance
+/*Design Patterns
+Creational focuses on object creation (imagine that).
+Structural focuses on object composition.
+Behavioral focuses on communication between objects
+*/
+
+
+
+var Test = function() {
+    var private = {
+        testOne : function () {},
+        testTwo : function () {},
+        testThree : function () {}
+    };
+
+    function getMethods() {
+        for (i in this) {
+            console.log(i); // shows getMethods, but not private methods
+        }
+        for (i in private) {
+            console.log(i); // private methods
+        }
+    }
+    return { getMethods : getMethods }
+}();
+
+// will return ['testOne', 'testTwo', 'testThree', 'getMethods']
+Test.getMethods();
+
+
+
+
+
+
+
+
+//JavaScript Observer Design Pattern
+
+function MyModule(v){    
+    var value=v;
+ 
+    return {
+        getValue: function(){
+            return value;
+        }
+    };
+}
+module = MyModule(5);
+module.getValue();
+
+
+
+
+var MyModule = (function(module,v){
+var value=v;
+ 
+module.getValue = function(){
+return value;
+};
+ 
+return module;
+}(MyModule || {},5));
+
+
+
+//
+//function function undefined number function object string undefined object boolean object object function undefined 
+
+//console.log(setInterval(Math.random(),1000));	// step 1
+//setInterval(function(){console.log(Math.random())},1000); // step 2
+
+/*** REF ***/
+/*Automatic type coercion:
+equality comparison operators (== and !=)
+type checked comparison operators, (=== and !==) */
+
+/* Difference between == and === : 
+== compares using implicit type casting.
+=== compares both the value and the type - both must match.
+*/
+
+/*
+prototype is a property of a Function object. It is the prototype of objects constructed by that function.
+
+__proto__ is internal property of an object, pointing to its prototype. Current standards provide an equivalent Object.getPrototypeOf(O) method, though de facto standard __proto__ is quicker.
+
+You can find instanceof relationships by comparing a function's prototype to an object's __proto__ chain, and you can break these relationships by changing prototype.
+*/
+</script>
+
+</head> 
+<body></body>
+</html>
