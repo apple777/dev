@@ -6,39 +6,42 @@ function Listen() {
 	this.listen = function($msg) {
 		//console.log($msg);
 		x = $msg;
+		//this.listen.arguments[0];
 		//console.log(zubri);
 		//return function($msg){}
 		//typeof ($msg)
 		//console.log(typeof $msg)
-			//console.log(listen.prototype);
+		//console.log(listen.prototype);
 
 	};
 
 	this.say = function() {
 
 			//todo: return all messages pass to listen.
+
 			//console.log(__proto__:listen);
 
 		//this.listen = function();
 		//console.log($msg);
 		//a = new listen();
 		//console.log(a);
-		console.log(x.length, "x = b");
+		console.log(x.length, "x = b" /* second argument */ );
 		return x;
-		//Listen.iAm.listen()
+		//Listen.iAm.listen();
 	}
 	
 }
 	//console.log(Listen.listen, "777");
 
 var iAm = new Listen();
-
+// obj.method();
 iAm.listen("a");
 iAm.listen("b");
+
 var cont = iAm.constructor.name;
 //var x1=iAm.say.toString();
 
-console.log(cont, "constructor");
+console.log(cont, 'constructor' /* Listen*/ );
 
 //iAm.say("ab");
 
