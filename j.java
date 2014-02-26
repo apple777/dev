@@ -6,3 +6,15 @@ public class HelloWorld {
         out.println("Hello World!");
     }
 }
+
+
+
+class Foo {
+    int bar(int a, int b) {
+        return (a*2) + b;
+    }
+ 
+    int bar(int a) {
+        return a*2;
+    }
+}
