@@ -1,15 +1,18 @@
 
 // constructor 
 function Listen() {
-	var x;
-	console.log(x, "x =?");
+	var x="";
+	//x="";
+	//console.log(x, "x =?");
 	this.listen = function($msg) {
-		//console.log($msg);
-		x = $msg;
+		//console.log(this);
+		//x = $msg;
+		x += $msg;
+		//x.arguments[0]; X IS NOT AN OBJ
 		//this.listen.arguments[0];
-		//console.log(zubri);
+		console.log(x);
 		//return function($msg){}
-		//typeof ($msg)
+		console.log(typeof (x));
 		//console.log(typeof $msg)
 		//console.log(listen.prototype);
 
@@ -25,7 +28,7 @@ function Listen() {
 		//console.log($msg);
 		//a = new listen();
 		//console.log(a);
-		console.log(x.length, "x = b" /* second argument */ );
+		//console.log(x.length, "x = b" /* second argument */ );
 		return x;
 		//Listen.iAm.listen();
 	}
@@ -54,14 +57,36 @@ if(say == "ab") {
 }
 
 function WhoIsListen() {
+	var x = "";
+	var y = "";
+	var str="";
+	var strDot=" ."
 
+	
 	return {
-		
+
 		'listen': function(msg, who) {
-			console.log(msg, who);
+			//console.log(msg, who, "ergserhserdh");
+			x = msg;
+			y = who;
+			//console.log(y.name +" say: "+x, " xxxxxxxx");
+			if(y.name == "Dan"){
+				str=y.name +" say: "+x+".";
+
+				//join(.);
+
+			}else{
+				strDot=str+y.name +" say: "+x;
+
+
+			}
+			str=y.name +" say: "+x;
+
 		},
 		
 		'say': function() {
+			
+			return str;
 
 		}
 	}
@@ -73,21 +98,22 @@ var michael = {'name': 'Michael'};
 
 //console.log(v);
 
-
+//Dan say: Hi. Michael say: Hello.  conversation 
 var whoSayWhat = new WhoIsListen();
 
 whoSayWhat.listen("Hi", dan);
-console.log(whoSayWhat.listen[msg], "ddd");
+//console.log(whoSayWhat.listen[msg], "ddd");
 whoSayWhat.listen("Hello", michael);
 
 
-for (var key in whoSayWhat) {
-    if (whoSayWhat.listen) {
-        console.log(key, "FFF");
-    }
-}
 
-console.log(whoSayWhat.listen(msg), "f");
+/*for (var key in whoSayWhat) {
+    if (whoSayWhat.listen) {
+        //console.log(key, "FFF");
+    }
+}*/
+
+//console.log(whoSayWhat.listen(msg), "f");
 var conversation = whoSayWhat.say();
 
 console.log(conversation , "conversation");
