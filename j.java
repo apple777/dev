@@ -1,28 +1,56 @@
 import static java.lang.System.out;
- 
-public class HelloWorld {
-    public static void main(String[] args) {
-
-        out.println("Hello World!");
-    }
-}
-
-
-
-class Foo {
-    int bar(int a, int b) {
-        return (a*2) + b;
-    }
- 
-    int bar(int a) {
-        return a*2;
-    }
-}
-
-
-
 import java.util.Arrays;
 import java.util.Comparator;
+
+import java.util.Observable;
+import java.util.Observer;
+
+class MessageBoard extends Observable {
+  private String message;
+
+  public String getMessage() {
+    return message;
+  }
+
+  public void changeMessage(String message) {
+    this.message = message;
+    setChanged();
+    notifyObservers(message);
+  }
+
+  public static void main(String[] args) {
+    MessageBoard board = new MessageBoard();
+    Student bob = new Student();
+    Student joe = new Student();
+    board.addObserver(bob);
+    board.addObserver(joe);
+    board.changeMessage("More Homework!");
+  }
+}
+
+class Student implements Observer {
+  public void update(Observable o, Object arg) {
+    System.out.println("Message board changed: " + arg);
+  }
+}
+
+
+
+public static void main(String[] args) {
+  int f = 0;
+  int g = 1;
+
+  for(int i = 1; i <= 10; i++)
+  {
+    System.out.print(f + " ");
+    f = f + g;
+    g = f - g;
+  } 
+
+  System.out.println();
+}
+
+
 
 public class StupidComparator { 
     public static void main(String[] args) {
@@ -52,6 +80,11 @@ public class StupidComparator {
 
 
 
+
+
+
+
+
 class child extends parent
 {
     child(int a,int b)
@@ -61,3 +94,22 @@ class child extends parent
     }
 }
 
+
+public class HelloWorld {
+    public static void main(String[] args) {
+
+        out.println("Hello World!");
+    }
+}
+
+
+
+class Foo {
+    int bar(int a, int b) {
+        return (a*2) + b;
+    }
+ 
+    int bar(int a) {
+        return a*2;
+    }
+}
