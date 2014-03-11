@@ -5,6 +5,24 @@ import java.util.Comparator;
 import java.util.Observable;
 import java.util.Observer;
 
+
+
+
+
+
+public abstract FormService<F extends Form> {
+    public abstract void populate(F form);
+}
+
+public TestFormService extends FormService<TestForm> {
+    @Override
+    public void populate(TestForm form) {
+      //populate
+    }
+}
+
+
+
 class MessageBoard extends Observable {
   private String message;
 
