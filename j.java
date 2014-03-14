@@ -7,6 +7,68 @@ import java.util.Observer;
 
 
 
+public void amuseAnimals( List<Animal> animals ) {
+    for ( Animal animal : animals ) {
+         if ( animal instanceof Dog ) {
+             Dog doggy = (Dog)animal;
+             doggy.takeForWalk( new WalkingRoute() );
+         } else if ( animal instanceof Cat ) {
+             Cat puss = (Cat)animal;
+             puss.play( new BirdShapedToy() );
+         }
+     }
+}
+
+public void amuseAnimals( List<Animal> animals ) {
+    for ( Animal animal : animals ) {
+         if ( animal instanceof Dog ) {
+             Dog doggy = (Dog)animal;
+             doggy.takeForWalk( new WalkingRoute() );
+         } else if ( animal instanceof Cat ) {
+             Cat puss = (Cat)animal;
+             puss.play( new BirdShapedToy() );
+         }
+     }
+}
+
+
+
+
+private int x
+
+public int getInt(String password){
+ if(password.equals("RealPassword")){
+   return x
+  }
+}
+
+
+
+
+
+
+
+
+java.lang.reflect.Method method;
+
+try {
+  method = obj.getClass().getMethod(methodName, param1.class, param2.class, ..);
+} catch (SecurityException e) {
+  // ...
+} catch (NoSuchMethodException e) {
+  // ...
+}
+The parameters identify the very specific method you need (if there are several overloaded available, if the method has no arguments, only give methodName).
+
+Then you invoke that method by calling
+
+try {
+  method.invoke(obj, arg1, arg2,...);
+} catch (IllegalArgumentException e) {
+} catch (IllegalAccessException e) {
+} catch (InvocationTargetException e) {
+
+
 
 
 
